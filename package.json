@@ -1,0 +1,34 @@
+
+{
+  "title": "PodCast",
+  "name": "PodCast",
+  "version": "1.0.0-beta",
+  "description": "Inspired in goodreads",
+  "license": "MIT",
+  "author": "Aleix Ordeig",
+  "contributors": [
+    "Still Waiting"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleixordeig/PodCast-Web.git"
+  },
+  "scripts": {
+    "start": "node server/app",
+    "dev": "nodemon server/app",
+    "build:scss": "node-sass src/scss/clean-blog.scss client/css/clean-blog.css",
+    "build:scss:watch": "node-sass src/scss/clean-blog.scss client/css/clean-blog.css --watch"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta",
+    "express": "^4.15.4",
+    "font-awesome": "4.7.0",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.11.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0"
+  },
+  "main": ""
+}
