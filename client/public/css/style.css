@@ -3,3 +3,11 @@
 .carousel-inner .prev    { left: -25%; }
 .carousel-control        { width:  4%; }
 .carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}
+
+.portfolio-item {
+    margin-bottom: 30px;
+}
+
+.pagination {
+    margin-bottom: 30px;
+}
