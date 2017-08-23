@@ -31,6 +31,10 @@ app.get('/register', (req,res) => {
 	res.render('pages/register')
 })
 
+app.get('/a', (req,res) => {
+	res.render('pages/account')
+})
+
 app.listen(PORT)
 console.log(`Magic happens at PORT ${PORT}...`)
 
