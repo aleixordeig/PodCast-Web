@@ -1,18 +1,26 @@
 angular.module('podcast')
-	.controller('GreetingController', ['$scope', function($scope) {
-  		$scope.greeting = [
+	.controller('FavouriteController', ['$scope', function($scope) {
+  		$scope.favourites = [
     {
+      id: 123,
       name: 'Nexus S',
-      snippet: 'Fast just got faster with Nexus S.'
+      url: '/episodes' 
     }, 
     {
+      id: 456,
       name: 'Motorola XOOM™ with Wi-Fi',
       snippet: 'The Next, Next Generation tablet.'
     }, 
     {
+      id: 789,
       name: 'MOTOROLA XOOM™',
       snippet: 'The Next, Next Generation tablet.'
     }
   ];
+	$scope.remove = function(id) { 
+	  $scope.favourites = $scope.favourites.filter(function(favourite) {
+	  	 return favourite.id !== id
+	  });
+	}
 }]);
 
