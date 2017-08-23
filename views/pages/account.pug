@@ -62,6 +62,8 @@ block content
                           strong `Discussions`
               // /row
             #messages.tab-pane
+              div(ng-controller='GreetingController')
+                | {{ greeting }}
               .alert.alert-info.alert-dismissable
                 a.panel-close.close(data-dismiss='alert') ×
                 |  This is an 
