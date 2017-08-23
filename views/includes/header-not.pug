@@ -1,0 +1,23 @@
+header
+  nav.navbar.navbar-expand-lg.navbar-dark.blue.darken-3
+    .container
+      a.navbar-brand(href='#') PodCast
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item.active
+            a.nav-link(href='index.html')
+              | Inicio 
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='category.html') Categorias
+          li.nav-item
+            a.nav-link(href='#') Contacto
+        ul.navbar-nav.ml-auto
+          form.form-inline
+            input.form-control.mr-sm-2(type='text', placeholder='Buscar', aria-label='Search')
+          li.nav-item
+            a.nav-link(href='#') Login
+          li.nav-item
+            a.nav-link(href='#') Register

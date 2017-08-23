@@ -1,0 +1,75 @@
+extends ../layout/layout
+
+block content
+  main
+    // Page Content
+    .container
+      // Page Heading
+      h1.my-4
+        | Resultado de la Busqueda:
+        small +Busqueda
+      // Project One
+      .row
+        .col-md-7
+          a(href='#')
+            img.img-fluid.rounded.mb-3.mb-md-0(src='http://placehold.it/700x300', alt='')
+        .col-md-5
+          h3 Project One
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.
+          a.btn.btn-primary(href='#') View Project
+      // /.row
+      hr
+      // Project Two
+      .row
+        .col-md-7
+          a(href='#')
+            img.img-fluid.rounded.mb-3.mb-md-0(src='http://placehold.it/700x300', alt='')
+        .col-md-5
+          h3 Project Two
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.
+          a.btn.btn-primary(href='#') View Project
+      // /.row
+      hr
+      // Project Three
+      .row
+        .col-md-7
+          a(href='#')
+            img.img-fluid.rounded.mb-3.mb-md-0(src='http://placehold.it/700x300', alt='')
+        .col-md-5
+          h3 Project Three
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!
+          a.btn.btn-primary(href='#') View Project
+      // /.row
+      hr
+      // Project Four
+      .row
+        .col-md-7
+          a(href='#')
+            img.img-fluid.rounded.mb-3.mb-md-0(src='http://placehold.it/700x300', alt='')
+        .col-md-5
+          h3 Project Four
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?
+          a.btn.btn-primary(href='#') View Project
+      // /.row
+      hr
+      // Pagination
+      ul.pagination.justify-content-center
+        li.page-item
+          a.page-link(href='#', aria-label='Previous')
+            span(aria-hidden='true') «
+            span.sr-only Previous
+        li.page-item
+          a.page-link(href='#') 1
+        li.page-item
+          a.page-link(href='#') 2
+        li.page-item
+          a.page-link(href='#') 3
+        li.page-item
+          a.page-link(href='#', aria-label='Next')
+            span(aria-hidden='true') »
+            span.sr-only Next
+    // /.container
