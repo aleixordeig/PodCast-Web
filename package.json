@@ -13,10 +13,13 @@
     "url": "git+https://github.com/aleixordeig/PodCast-Web.git"
   },
   "scripts": {
-    "start": "node server/app",
-    "dev": "nodemon server/app",
+    "start": "node app",
+    "dev": "nodemon app",
     "build:scss": "node-sass src/scss/clean-blog.scss client/css/clean-blog.css",
     "build:scss:watch": "node-sass src/scss/clean-blog.scss client/css/clean-blog.css --watch"
+  },
+  "engines": {
+    "node": "6.11.2"
   },
   "dependencies": {
     "bootstrap": "^4.0.0-beta",
