@@ -63,7 +63,13 @@ block content
               // /row
             #messages.tab-pane
               div(ng-controller='GreetingController')
-                | {{ greeting }}
+                table
+                  tr
+                    th Row number
+                  tr(ng-repeat='i in greeting')
+                    td 
+                      span.float-right.font-weight-bold.alert-dismissable 3 hrs ago
+                      |{{i}}
               .alert.alert-info.alert-dismissable
                 a.panel-close.close(data-dismiss='alert') ×
                 |  This is an 
