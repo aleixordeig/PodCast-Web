@@ -5,44 +5,12 @@ block content
     .container
       .row.my-2
         .col-lg-4.order-lg-1.text-center
-          img.mx-auto.img-fluid.img-circle.d-block(src='https://placehold.it/150x150', alt='avatar')
+          img.mx-auto.img-fluid.img-circle.d-block(src='https://placehold.it/300x300', alt='avatar')
           h6.mt-2 Upload a different photo
           label.custom-file
             input#file.custom-file-input(type='file')
             span.custom-file-control
         .col-lg-8.order-lg-2
-          ul.nav.nav-tabs
-            li.nav-item
-              a.nav-link.active(href='', data-target='#profile', data-toggle='tab') Perfil
-            li.nav-item
-              a.nav-link(href='', data-target='#messages', data-toggle='tab') Favoritos
-            li.nav-item
-              a.nav-link(href='', data-target='#edit', data-toggle='tab') Editar
-          .tab-content.py-4
-            #profile.tab-pane.active
-              h5.mb-3 User Profile
-              .row
-                .col-md-6
-                  h6 About
-                  p
-                    | Web Designer, UI/UX Engineer
-                  h6 Hobbies
-                  p
-                    | Indie music, skiing and hiking. I love the great outdoors.
-            #messages.tab-pane
-              div(ng-controller='FavouriteController')
-                table.table.table-hover.table-striped
-                  tbody
-                    tr(ng-repeat='favourite in favourites')
-                      td 
-                        a(href="{{ favourite.url }}") {{ favourite.name }}
-                        a.float-right.font-weight-bold.alert-dismissable(ng-click="remove(favourite.id)") (X)
-              .alert.alert-info.alert-dismissable
-                a.panel-close.close(data-dismiss='alert') ×
-                |  This is an 
-                strong .alert
-                | . Use this to show important messages to the user.
-            #edit.tab-pane
               div(ng-controller='updateProfile')
                 form(role='form')
                   .form-group.row

@@ -15,3 +15,10 @@
 h5.mb-0 {
   margin-top:10px;
 }
+
+.float-right.font-weight-bold.alert-dismissable{
+    position: absolute;
+    z-index: 1;
+    right: 30px;
+    top: 10px;
+}

@@ -2,9 +2,26 @@ extends ../layout/layout
 
 block content
   main
-    img.card-img-top(src='img/podcast-header.jpg', alt='')
-  // Main layout
-  // Page Content
+    #carousel-example-1z.carousel.slide.carousel-fade(data-ride='carousel')
+      ol.carousel-indicators
+        li.active(data-target='#carousel-example-1z', data-slide-to='0')
+        li(data-target='#carousel-example-1z', data-slide-to='1')
+        li(data-target='#carousel-example-1z', data-slide-to='2')
+      .carousel-inner(role='listbox')
+        .carousel-item.active
+          img.d-block.w-100(src='img/header-guitar.jpg', alt='First slide')
+        .carousel-item
+          img.d-block.w-100(src='img/header-sound.png', alt='Second slide')
+        .carousel-item
+          img.d-block.w-100(src='img/header-head.png', alt='Third slide')
+        
+      a.carousel-control-prev(href='#carousel-example-1z', role='button', data-slide='prev')
+        span.carousel-control-prev-icon(aria-hidden='true')
+        span.sr-only Previous
+      a.carousel-control-next(href='#carousel-example-1z', role='button', data-slide='next')
+        span.carousel-control-next-icon(aria-hidden='true')
+        span.sr-only Next
+     
   .container
     // Page Heading
     h1.my-4

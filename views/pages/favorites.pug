@@ -2,26 +2,22 @@ extends ../layout/layout
 
 block content
   main
-    // Page Content
     .container
-      // Page Heading
       h1.my-4
         | Favoritos
-        small ;)
+        small   ;)
       div(ng-controller='FavouriteController')
         .row
-          .col-lg-4.col-sm-6.portfolio-item(ng-repeat='favourite in favourites')
-            .card.h-100
+          .col-lg-3.col-md-4.col-sm-6.portfolio-item(ng-repeat='favourite in favourites')
+            a.float-right.font-weight-bold.alert-dismissable(ng-click="remove(favourite.id)") X
+            .card.h-100 
               a(href='{{ favourite.url }}')
                 img.card-img-top(src='http://placehold.it/700x400', alt='')
               .card-body
                 h4.card-title
                   a(href="{{ favourite.url }}") {{ favourite.name }}
-                  a.float-right.font-weight-bold.alert-dismissable(ng-click="remove(favourite.id)") (X)
                 p.card-text
                   | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem! 
-        // /.row
-        // Pagination
         ul.pagination.justify-content-center
           li.page-item
             a.page-link(href='#', aria-label='Previous')
@@ -37,4 +33,3 @@ block content
             a.page-link(href='#', aria-label='Next')
               span(aria-hidden='true') »
               span.sr-only Next
-      // /.container
