@@ -9,26 +9,27 @@ block content
           .alert.alert-danger
             a.close(data-dismiss='alert', href='#') ×
             | La costraseña es demasiado corta.
-          fieldset
-            .form-group.has-error
-              input.form-control.input-lg(placeholder='Usuario', name='username', type='text')
-            .form-group.has-error
-              input.form-control.input-lg(placeholder='E-mail', name='email', type='text')
-            .form-group.has-success
-              input.form-control.input-lg(placeholder='Contraseña', name='password', value='', type='password')
-            .form-group.has-success
-              input.form-control.input-lg(placeholder='Confirmar contraseña', name='password', value='', type='password')
-            .form-group
-              select.form-control.input-lg
-                option(selecterd='') En donde vives?
-                option(selecterd='') Tienes algun apodo?
-                option(selecterd='') Eres un espia?
-                option(selecterd='') Destruyes codigo?
-            .form-group
-              input.form-control.input-lg(placeholder='Respuesta de seguridad', name='answer', value='', type='text')
-            .checkbox
-              label.small
-                input(name='terms', type='checkbox')
-                |  Acepto los 
-                a(href='#') terminos de condicion
-            input.btn.btn-lg.btn-primary.btn-block(value='Registrame!', type='submit')
+          div(ng-controller='registerUser')
+              fieldset
+                .form-group.has-error
+                  input.form-control.input-lg(placeholder='Usuario', ng-model='info.name',type='text')
+                .form-group.has-error
+                  input.form-control.input-lg(placeholder='E-mail', ng-model='info.email', type='text')
+                .form-group.has-success
+                  input.form-control.input-lg(placeholder='Contraseña', ng-model='info.password', type='password')
+                .form-group.has-success
+                  input.form-control.input-lg(placeholder='Confirmar contraseña',ng-model='info.confirm', type='password')
+                //- .form-group
+                //-   select.form-control.input-lg
+                //-     option(selecterd='') En donde vives?
+                //-     option(selecterd='') Tienes algun apodo?
+                //-     option(selecterd='') Eres un espia?
+                //-     option(selecterd='') Destruyes codigo?
+                //- .form-group
+                //-   input.form-control.input-lg(placeholder='Respuesta de seguridad', ng-model='info.answer', value='', type='text')
+                .checkbox
+                  label.small
+                    input(value='terms', type='checkbox')
+                    |  Acepto los
+                    a(href='#')  terminos de condición
+                input.btn.btn-lg.btn-primary(ng-click="register(info)" value="Registrarme" readonly)

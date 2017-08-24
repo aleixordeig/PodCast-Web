@@ -5,26 +5,27 @@ block content
     .row
       .col-md-12
         h2.text-center.text-white.mb-4 Más libros, más libres
-        .row
-          .col-md-6.mx-auto
-            span#formLogin.anchor
-            // form card login
-            .card.rounded-0
-              .card-header
-                h3.mb-0 Login
-              .card-body
-                form#formLogin.form(role='form', autocomplete='off')
-                  .form-group
-                    label(for='uname1') Usuario
-                    input#uname1.form-control.form-control-lg.rounded-0(type='text', name='uname1', required='')
-                  .form-group
-                    label Contraseña
-                    input#pwd1.form-control.form-control-lg.rounded-0(type='password', required='', autocomplete='new-password')
-                  div
-                    label.custom-control.custom-checkbox
-                      input.custom-control-input(type='checkbox')
-                      span.custom-control-indicator
-                      span.custom-control-description.small Recuerdame en este ordenador
-                  button.btn.btn-info.btn-small.float-left(type='button') Register
-                  button.btn.btn-success.btn-small.float-right(type='button') Login
-          
+        div(ng-controller='loginUser')
+          .row
+            .col-md-6.mx-auto
+              span#formLogin.anchor
+              // form card login
+              .card.rounded-0
+                .card-header
+                  h3.mb-0 Login
+                .card-body
+                  form#formLogin.form(role='form', autocomplete='off')
+                    .form-group
+                      label(for='uname1') Usuario
+                      input#uname1.form-control.form-control-lg.rounded-0(type='text', ng-model='user', required='')
+                    .form-group
+                      label Contraseña
+                      input#pwd1.form-control.form-control-lg.rounded-0(type='password', required='', ng-model='password', autocomplete='new-password')
+                    div
+                      label.custom-control.custom-checkbox
+                        input.custom-control-input(type='checkbox')
+                        span.custom-control-indicator
+                        span.custom-control-description.small Recuerdame en este ordenador
+                    button.btn.btn-info.btn-small.float-left(type='button' onclick="location.href='register'") Register
+                    button.btn.btn-success.btn-small.float-right(ng-click="login()" value="Login" readonly ) Login
+            
