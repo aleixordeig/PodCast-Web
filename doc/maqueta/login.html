@@ -15,62 +15,63 @@
     <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/login.css" rel="stylesheet">
-
 </head>
 
 <body>
-	<div class="container py-5">
-    <div class="row">
-        <div class="col-md-12">
-            <h2 class="text-center text-white mb-4">Más libros, más libres</h2>
-            <div class="row">
-                <div class="col-md-6 mx-auto">
-                    <span class="anchor" id="formLogin"></span>
-
-                    <!-- form card login -->
-                    <div class="card rounded-0">
-                        <div class="card-header">
-                            <h3 class="mb-0">Login</h3>
-                        </div>
-                        <div class="card-body">
-                            <form class="form" role="form" autocomplete="off" id="formLogin">
-                                <div class="form-group">
-                                    <label for="uname1">Usuario</label>
-                                    <input type="text" class="form-control form-control-lg rounded-0" name="uname1" id="uname1" required="">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center text-white mb-4">Más libros, más libres</h2>
+                <div class="row">
+                    <div class="col-md-6 mx-auto">
+                        <span class="anchor" id="formLogin"></span>
+                        <!-- form card login -->
+                        <section class="form-elegant">
+                            <!--Form without header-->
+                            <div class="card">
+                                <div class="card-body mx-4">
+                                    <!--Header-->
+                                    <div class="text-center">
+                                        <h3 class="blue-text mb-5"><strong>Sign in</strong></h3>
+                                    </div>
+                                    <!--Body-->
+                                    <div class="md-form">
+                                        <input type="text" id="Form-email1" class="form-control">
+                                        <label for="Form-email1">Your email</label>
+                                    </div>
+                                    <div class="md-form pb-3">
+                                        <input type="password" id="Form-pass1" class="form-control">
+                                        <label for="Form-pass1">Your password</label>
+                                        <p class="font-small blue-text d-flex justify-content-end">Forgot <a href="#" class="blue-text ml-1"> Password?</a></p>
+                                    </div>
+                                    <div class="text-center mb-3">
+                                        <button type="button" class="btn blue btn-block btn-rounded z-depth-1a">Sign in</button>
+                                    </div>
+                                    <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in with:</p>
+                                    <div class="row my-3 d-flex justify-content-center">
+                                        <!--Facebook-->
+                                        <button type="button" class="btn btn-white btn-rounded mr-md-3 "><i class="fa fa-facebook blue-text text-center"></i></button>
+                                        <!--Twitter-->
+                                        <button type="button" class="btn btn-white btn-rounded mr-md-3 "><i class="fa fa-twitter blue-text"></i></button>
+                                        <!--Google +-->
+                                        <button type="button" class="btn btn-white btn-rounded"><i class="fa fa-google-plus blue-text"></i></button>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label>Contraseña</label>
-                                    <input type="password" class="form-control form-control-lg rounded-0" id="pwd1" required="" autocomplete="new-password">
+                                <!--Footer-->
+                                <div class="container-fluid">
+                                    <button type="Button" class="btn blue btn-small float-left">Volver</button>
+                                    <p class="font-small grey-text d-flex justify-content-end">Not a member? <a href="#" class="blue-text ml-1"> Sign Up</a></p>
                                 </div>
-                                <div>
-                                    <label class="custom-control custom-checkbox">
-                                      <input type="checkbox" class="custom-control-input">
-                                      <span class="custom-control-indicator"></span>
-                                      <span class="custom-control-description small">Recuerdame en este ordenador</span>
-                                    </label>
-                                </div>
-                                <button type="button" class="btn btn-info btn-small float-left">Register</button>
-                                <button type="button" class="btn btn-success btn-small float-right">Login</button>
-                            </form>
-                        </div>
-                        <!--/card-block-->
-                        <hr/>
-                        <a href="index.html">Volver a atras</a>
-                    </div>
-                    <!-- /form card login -->
-
-                </div>
-
-
-            </div>
+                            </div>
+                            <!--/Form without header-->
+                        </section>
             <!--/row-->
-
         </div>
         <!--/col-->
     </div>
     <!--/row-->
-</div>
-<!--/container-->
+    </div>
+    <!--/container-->
     <!-- SCRIPTS -->
     <!-- JQuery -->
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>

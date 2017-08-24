@@ -2,31 +2,85 @@ extends ../layout/layout-login-register
 
 block content
   .container.py-5
-    .row
-      .col-md-12
-        h2.text-center.text-white.mb-4 Más libros, más libres
-        div(ng-controller='loginUser')
-          .row
-            .col-md-6.mx-auto
-              span#formLogin.anchor
-              // form card login
-              .card.rounded-0
-                .card-header
-                  h3.mb-0 Login
-                .card-body
-                  form#formLogin.form(role='form', autocomplete='off')
-                    .form-group
-                      label(for='uname1') Usuario
-                      input#uname1.form-control.form-control-lg.rounded-0(type='text', ng-model='user', required='')
-                    .form-group
-                      label Contraseña
-                      input#pwd1.form-control.form-control-lg.rounded-0(type='password', required='', ng-model='password', autocomplete='new-password')
-                    div
-                      label.custom-control.custom-checkbox
-                        input.custom-control-input(type='checkbox')
-                        span.custom-control-indicator
-                        span.custom-control-description.small Recuerdame en este ordenador
-                    button.btn.btn-info.btn-small.float-left(type='button' onclick="location.href='register'") Register
-                    button.btn.btn-success.btn-small.float-right(ng-click="login()" value="Login" readonly ) Login
+  .row
+    .col-md-12
+      h2.text-center.text-white.mb-4 Más libros, más libres
+      div(ng-controller='loginUser')
+        .row
+          .col-md-6.mx-auto
+            span#formLogin.anchor
+            // form card login
+            section.form-elegant
+              // Form without header
+              .card
+                .card-body.mx-4
+                  // Header
+                  .text-center
+                    h3.blue-text.mb-5
+                      strong Sign in
+                  // Body
+                  .md-form
+                    input#Form-email1.form-control(type='text', ng-model='user', required='')
+                    label(for='Form-email1') Your email
+                  .md-form.pb-3
+                    input#Form-pass1.form-control(type='password',ng-model='user', required='')
+                    label(for='Form-pass1') Your password
+                    p.font-small.blue-text.d-flex.justify-content-end
+                      | Forgot 
+                      a.blue-text.ml-1(href='#')  Password?
+                  .text-center.mb-3
+                    button.btn.blue.btn-block.btn-rounded.z-depth-1a(ng-click="login()" value="Login" readonly ) Sign in
+                  p.font-small.dark-grey-text.text-right.d-flex.justify-content-center.mb-3.pt-2  or Sign in with:
+                  .row.my-3.d-flex.justify-content-center
+                    // Facebook
+                    button.btn.btn-white.btn-rounded.mr-md-3(type='button')
+                      i.fa.fa-facebook.blue-text.text-center
+                    // Twitter
+                    button.btn.btn-white.btn-rounded.mr-md-3(type='button')
+                      i.fa.fa-twitter.blue-text
+                    // Google +
+                    button.btn.btn-white.btn-rounded(type='button')
+                      i.fa.fa-google-plus.blue-text
+                // Footer
+                .container-fluid
+                  button.btn.blue.btn-small.float-left(type='Index') Volver
+                  p.font-small.grey-text.d-flex.justify-content-end
+                    | Not a member? 
+                    a.blue-text.ml-1(href='register')  Sign Up
+              // /Form without header
+            // /row
+          // /col
+
+
+
+
+
+  //- .container.py-5
+  //-   .row
+  //-     .col-md-12
+  //-       h2.text-center.text-white.mb-4 Más libros, más libres
+  //-       div(ng-controller='loginUser')
+  //-         .row
+  //-           .col-md-6.mx-auto
+  //-             span#formLogin.anchor
+  //-             // form card login
+  //-             .card.rounded-0
+  //-               .card-header
+  //-                 h3.mb-0 Login
+  //-               .card-body
+  //-                 form#formLogin.form(role='form', autocomplete='off')
+  //-                   .form-group
+  //-                     label(for='uname1') Usuario
+  //-                     input#uname1.form-control.form-control-lg.rounded-0(type='text', ng-model='user', required='')
+  //-                   .form-group
+  //-                     label Contraseña
+  //-                     input#pwd1.form-control.form-control-lg.rounded-0(type='password', required='', ng-model='password', autocomplete='new-password')
+  //-                   div
+  //-                     label.custom-control.custom-checkbox
+  //-                       input.custom-control-input(type='checkbox')
+  //-                       span.custom-control-indicator
+  //-                       span.custom-control-description.small Recuerdame en este ordenador
+  //-                   button.btn.btn-info.btn-small.float-left(type='button' onclick="location.href='register'") Register
+  //-                   button.btn.btn-success.btn-small.float-right(ng-click="login()" value="Login" readonly ) Login
               
             

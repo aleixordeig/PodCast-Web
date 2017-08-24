@@ -22,3 +22,7 @@ h5.mb-0 {
     right: 30px;
     top: 10px;
 }
+
+.font-small.grey-text.d-flex.justify-content-end {
+  padding-top: 13px;
+}
