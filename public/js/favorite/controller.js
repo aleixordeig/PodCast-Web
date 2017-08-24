@@ -9,12 +9,12 @@ angular.module('podcast')
     {
       id: 456,
       name: 'Motorola XOOM™ with Wi-Fi',
-      snippet: 'The Next, Next Generation tablet.'
+      url: 'http://www.skylabcoders.com/es/'
     }, 
     {
       id: 789,
       name: 'MOTOROLA XOOM™',
-      snippet: 'The Next, Next Generation tablet.'
+      url: 'https://giphy.com/gifs/artestpage-nico-l41lRGoXJJSWyGoFy'
     }
   ];
 	$scope.remove = function(id) { 

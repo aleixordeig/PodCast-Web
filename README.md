@@ -48,3 +48,5 @@ Casos de uso:
 -Se podra escuchar en la misma pagina con un reproductor si es posible con un pop up
 -Se podra adelantar o reducir la velocidad del podcast
 -
+
+WishList Create a Menu for favorites
