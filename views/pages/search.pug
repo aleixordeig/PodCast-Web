@@ -3,10 +3,9 @@ extends ../layout/layout
 block content
     main
     .container
-      
       // Page Heading
       h1.my-4
-        small PodCast: +(Busqueda)
+        small PodCast: #{getSearch()}
       .container-results
         .row
           .col-lg-3.col-md-4.col-sm-6.portfolio-item

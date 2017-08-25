@@ -18,10 +18,16 @@ function showSearch (req,res) {
     description: 'NOW.....',
     img: 'http',
     podcast: 'economy'
-  },
+  }
   ]
 
-	res.render('pages/search', { data })
+	res.render('pages/search', { 
+    getSearch: function (){
+        return req.query.search
+        }
+   })
 }
 
 module.exports = showSearch
+
+
