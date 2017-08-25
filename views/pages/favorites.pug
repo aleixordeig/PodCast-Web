@@ -20,9 +20,10 @@ block content
                       a(href='{{ favourite.url }}') {{ favourite.name }}
                     p.card-text
                       | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!
+                  a.btn.btn-primary(href='episodes') Button
               .col-lg-3.col-md-4.col-sm-6.portfolio-item(ng-hide='hasResults()')
                 p
-                  h4 Sin resultados
+                  h4 Sin favoritos
             ul.pagination.justify-content-center(ng-show='hasResults()')
               li.page-item
                 a.page-link(href='#', aria-label='Previous')
