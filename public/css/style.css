@@ -38,11 +38,16 @@ footer.page-footer.blue.darken-3.center-on-small-only {
 }
 
 .container-results {
-  min-height: 465px;
+  min-height: 475px;
 }
 
 .container-episodes {
   min-height: 190px;
 }
 
+.btn-outline-success {
+    border: 2px solid #0098c8;
+    color: #00c5c8!important;
+    background-color: transparent;
+}
 
