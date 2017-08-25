@@ -25,5 +25,14 @@ angular.module('podcast')
 	  	 return favourite.id !== id
 	  });
 	}
-}]);
 
+  $scope.hasResults = function () {
+    if($scope.favourites.length > 0){
+      return true
+    } else {
+      false
+    }
+  } 
+
+
+}]);
