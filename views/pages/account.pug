@@ -1,61 +1,62 @@
 extends ../layout/layout-my-account
 
 block content
-  main
-    .container
-      .row.my-2
-        .col-lg-4.order-lg-1.text-center
-          img.mx-auto.img-fluid.img-circle.d-block(src='https://placehold.it/300x300', alt='avatar')
-          h6.mt-2 Upload a different photo
-          label.custom-file
-            input#file.custom-file-input(type='file')
-            span.custom-file-control
-        .col-lg-8.order-lg-2
-              div(ng-controller='updateProfile')
-                form(role='form')
-                  .form-group.row
-                    label.col-lg-3.col-form-label.form-control-label Nombre
-                    .col-lg-9
-                      input.form-control(type='text', ng-model="info.name")
-                  .form-group.row
-                    label.col-lg-3.col-form-label.form-control-label Apellidos
-                    .col-lg-9
-                      input.form-control(type='text', ng-model="info.lastName")
-                  .form-group.row
-                    label.col-lg-3.col-form-label.form-control-label Email
-                    .col-lg-9
-                      input.form-control(type='email', ng-model="info.email")
-                  .form-group.row
-                    label.col-lg-3.col-form-label.form-control-label Compañia
-                    .col-lg-9
-                      input.form-control(type='text', ng-model="info.company")
-                  .form-group.row
-                    label.col-lg-3.col-form-label.form-control-label Web
-                    .col-lg-9
-                      input.form-control(type='url', ng-model="info.website")
-                  .form-group.row
-                    label.col-lg-3.col-form-label.form-control-label Dirrección
-                    .col-lg-9
-                      input.form-control(type='text', ng-model="info.address", placeholder='Calle')
-                  .form-group.row
-                    label.col-lg-3.col-form-label.form-control-label
-                    .col-lg-6
-                      input.form-control(type='text', ng-model="info.city", placeholder='Ciudad')
-                    .col-lg-3
-                      input.form-control(type='text', ng-model="info.country", placeholder='Pais')
-                  .form-group.row
-                    label.col-lg-3.col-form-label.form-control-label Usuario
-                    .col-lg-9
-                      input.form-control(type='text', ng-model="info.username")
-                  .form-group.row
-                    label.col-lg-3.col-form-label.form-control-label Contraseña
-                    .col-lg-9
-                      input.form-control(type='password', ng-model="info.password")
-                  .form-group.row
-                    label.col-lg-3.col-form-label.form-control-label Confirmar contraseña
-                    .col-lg-9
-                      input.form-control(type='password', ng-model="info.confirm")
-                  .form-group.row
-                    label.col-lg-3.col-form-label.form-control-label
-                    .col-lg-9
-                      input.btn.btn-primary(ng-click="save(info)" value="Save" readonly )
+  p
+    main
+      .container
+        .row.my-2
+          .col-lg-4.order-lg-1.text-center
+            img.mx-auto.img-fluid.img-circle.d-block(src='https://placehold.it/300x300', alt='avatar')
+            h6.mt-2 Upload a different photo
+            label.custom-file
+              input#file.custom-file-input(type='file')
+              span.custom-file-control
+          .col-lg-8.order-lg-2
+                div(ng-controller='updateProfile')
+                  form(role='form')
+                    .form-group.row
+                      label.col-lg-3.col-form-label.form-control-label Nombre
+                      .col-lg-9
+                        input.form-control(type='text', ng-model="info.name")
+                    .form-group.row
+                      label.col-lg-3.col-form-label.form-control-label Apellidos
+                      .col-lg-9
+                        input.form-control(type='text', ng-model="info.lastName")
+                    .form-group.row
+                      label.col-lg-3.col-form-label.form-control-label Email
+                      .col-lg-9
+                        input.form-control(type='email', ng-model="info.email")
+                    .form-group.row
+                      label.col-lg-3.col-form-label.form-control-label Compañia
+                      .col-lg-9
+                        input.form-control(type='text', ng-model="info.company")
+                    .form-group.row
+                      label.col-lg-3.col-form-label.form-control-label Web
+                      .col-lg-9
+                        input.form-control(type='url', ng-model="info.website")
+                    .form-group.row
+                      label.col-lg-3.col-form-label.form-control-label Dirrección
+                      .col-lg-9
+                        input.form-control(type='text', ng-model="info.address", placeholder='Calle')
+                    .form-group.row
+                      label.col-lg-3.col-form-label.form-control-label
+                      .col-lg-6
+                        input.form-control(type='text', ng-model="info.city", placeholder='Ciudad')
+                      .col-lg-3
+                        input.form-control(type='text', ng-model="info.country", placeholder='Pais')
+                    .form-group.row
+                      label.col-lg-3.col-form-label.form-control-label Usuario
+                      .col-lg-9
+                        input.form-control(type='text', ng-model="info.username")
+                    .form-group.row
+                      label.col-lg-3.col-form-label.form-control-label Contraseña
+                      .col-lg-9
+                        input.form-control(type='password', ng-model="info.password")
+                    .form-group.row
+                      label.col-lg-3.col-form-label.form-control-label Confirmar contraseña
+                      .col-lg-9
+                        input.form-control(type='password', ng-model="info.confirm")
+                    .form-group.row
+                      label.col-lg-3.col-form-label.form-control-label
+                      .col-lg-9
+                        input.btn.btn-primary(ng-click="save(info)" value="Save" readonly )

@@ -14,24 +14,25 @@ block content
           h3.my-3 Project Description
           p
             | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.
-    p
-    .container
-      #accordion(role='tablist', aria-multiselectable='true')
-        .card
-          #headingOne.card-header(role='tab', data-toggle='collapse', data-parent='#accordion', data-target='#collapseOne')
-            button.btn.btn-light-blue.float-right.btn-sm(type='button') Escuchar Audio
-            h5.mb-0
-              a(data-toggle='collapse', data-parent='#accordion', href='#collapseOne')
-                | EPISODE 1
-          #collapseOne.collapse.in(role='tabpanel', aria-labelledby='headingOne')
-            .card-block
-              | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-        .card
-          #headingTwo.card-header(role='tab', data-toggle='collapse', data-parent='#accordion', data-target='#collapseTwo')
-            button.btn.btn-light-blue.float-right.btn-sm(type='button') Escuchar Audio
-            h5.mb-0
-              a.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseOne')
-                | EPISODE 2
-          #collapseTwo.collapse(role='tabpanel', aria-labelledby='headingTwo')
-            .card-block
-              | Anim pariatur cliche reprehenderit, enim eiusmod high life accusaasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasmus terry richardson ad squid.
+    .container-episodes
+      p
+      .container
+        #accordion(role='tablist', aria-multiselectable='true')
+          .card
+            #headingOne.card-header(role='tab', data-toggle='collapse', data-parent='#accordion', data-target='#collapseOne')
+              button.btn.btn-light-blue.float-right.btn-sm(type='button') Escuchar Audio
+              h5.mb-0
+                a(data-toggle='collapse', data-parent='#accordion', href='#collapseOne')
+                  | EPISODE 1
+            #collapseOne.collapse.in(role='tabpanel', aria-labelledby='headingOne')
+              .card-block
+                | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+          .card
+            #headingTwo.card-header(role='tab', data-toggle='collapse', data-parent='#accordion', data-target='#collapseTwo')
+              button.btn.btn-light-blue.float-right.btn-sm(type='button') Escuchar Audio
+              h5.mb-0
+                a.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseOne')
+                  | EPISODE 2
+            #collapseTwo.collapse(role='tabpanel', aria-labelledby='headingTwo')
+              .card-block
+                | Anim pariatur cliche reprehenderit, enim eiusmod high life accusaasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasmus terry richardson ad squid.
