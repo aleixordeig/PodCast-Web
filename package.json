@@ -24,6 +24,7 @@
   "dependencies": {
     "audiosearch-client-node": "^1.0.1",
     "bootstrap": "^4.0.0-beta",
+    "dotenv": "^4.0.0",
     "events": "^1.1.1",
     "express": "^4.15.4",
     "font-awesome": "4.7.0",
