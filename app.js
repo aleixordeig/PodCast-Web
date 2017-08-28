@@ -2,6 +2,12 @@
 const dotenv = require('dotenv')
 dotenv.load()
 
+const Audiosearch = require('audiosearch-client-node')
+
+Audiosearch.prototype.searchShows = function (queryString, params) {
+  return this.get('/search/shows/'+encodeURI(queryString), params)
+}
+
 const express = require('express')
 const path = require('path')
 const app = express()
