@@ -15,8 +15,10 @@ header
           li.nav-item
             a.nav-link(href='#') Contacto
         ul.navbar-nav.ml-auto
-          form.form-inline
-            input.form-control.mr-sm-2(type='text', placeholder='Buscar', aria-label='Search')
+          form.form-inline(method='get', action='queryString')
+            input.form-control.mr-sm-2(type='text' placeholder='Buscar' aria-label='Search' name="queryString")
+            button.btn.btn-outline-success.btn-sm.my-2(type='submit')
+              i.fa.fa-search.fa-lg
           li.nav-item
             a.nav-link(href='#') Login
           li.nav-item

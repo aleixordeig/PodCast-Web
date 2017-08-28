@@ -22,12 +22,16 @@
     "node": "6.11.2"
   },
   "dependencies": {
+    "audiosearch-client-node": "^1.0.1",
     "bootstrap": "^4.0.0-beta",
+    "events": "^1.1.1",
     "express": "^4.15.4",
     "font-awesome": "4.7.0",
     "jquery": "^3.2.1",
     "popper.js": "^1.11.1",
+    "promise": "^8.0.1",
     "pug": "^2.0.0-rc.3",
+    "request": "^2.81.0",
     "routes": "^2.1.0"
   },
   "devDependencies": {
