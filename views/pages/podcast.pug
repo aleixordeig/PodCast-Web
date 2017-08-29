@@ -3,18 +3,20 @@ extends ../layout/layout
 block content
   main
     p
-      h1.text-center Type + Name of Podcast + item.name
+      h1.text-center Type + Name of Podcast
   // Main layout
   main.mt-5
     .container
-      .row
-        for item in podcast
+      for item in podcast
+        .row
           .col-md-6
-            img.img-fluid(src=item.img, alt='')
+            .container-image-episodes
+              img.img-fluid(src=item.img , alt='')
           .col-md-6
-            h3.my-3 Project Description
+            h3.my-3 
+              =item.name
             p
-              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.
+              =item.description
     .container-episodes
       p
       .container

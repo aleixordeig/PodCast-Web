@@ -83,3 +83,8 @@ h4.card-title {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+
+.container-image-episodes {
+  height: 0%;
+  width: 450px;
+}

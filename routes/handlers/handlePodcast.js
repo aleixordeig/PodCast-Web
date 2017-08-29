@@ -6,21 +6,16 @@ function handlePodcast(req, res) {
 
     audiosearch.getShow(req.params.id)
         .then(function(response) {
-            console.log(response)
-            const podcast = {
-                name: response.podcast.title,
-                description: response.podcast.description,
-                img: response.podcast.image_urls.full
-            }
+            const podcast = [{
+                name: response.title,
+                description: response.description,
+                img: response.image_urls.full
+            }]
 
             console.log(podcast)
 
             res.render('pages/podcast', { podcast })
         })
-        .catch(err => {
-            res.send(err)
-        });
-
 }
 
 module.exports = handlePodcast
