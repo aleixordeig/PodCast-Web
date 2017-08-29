@@ -3,18 +3,18 @@ extends ../layout/layout
 block content
   main
     p
-      h1.text-center Type + Name of Podcast
+      for item in podcast
+        h1.text-center 
+          =item.name
   // Main layout
   main.mt-5
     .container
       for item in podcast
         .row
-          .col-md-6
-            .container-image-episodes
-              img.img-fluid(src=item.img , alt='')
-          .col-md-6
-            h3.my-3 
-              =item.name
+          .col-md-4
+            img.img-fluid.episodes(src=item.img , alt='')
+          .col-md-8
+            h3.my-3 Content
             p
               =item.description
     .container-episodes

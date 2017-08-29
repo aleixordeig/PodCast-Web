@@ -84,7 +84,7 @@ h4.card-title {
   -webkit-box-orient: vertical;
 }
 
-.container-image-episodes {
-  height: 0%;
-  width: 450px;
+img.img-fluid.episodes {
+  height: 100%;
+  width: 350px;
 }
