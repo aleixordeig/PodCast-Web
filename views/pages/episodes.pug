@@ -3,17 +3,19 @@ extends ../layout/layout
 block content
   main
     p
-    h1.text-center Type + Name of Podcast
+      for item in show
+        h1.text-center Type + Name of Podcast
   // Main layout
   main.mt-5
     .container
       .row
-        .col-md-6
-          img.img-fluid(src='http://placehold.it/500x250', alt='')
-        .col-md-6
-          h3.my-3 Project Description
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.
+        for item in show
+          .col-md-6
+            img.img-fluid(src='http://placehold.it/500x250', alt='')
+          .col-md-6
+            h3.my-3 Project Description
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.
     .container-episodes
       p
       .container
