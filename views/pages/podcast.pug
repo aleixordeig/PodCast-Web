@@ -3,15 +3,14 @@ extends ../layout/layout
 block content
   main
     p
-      for item in show
-        h1.text-center Type + Name of Podcast
+      h1.text-center Type + Name of Podcast + item.name
   // Main layout
   main.mt-5
     .container
       .row
-        for item in show
+        for item in podcast
           .col-md-6
-            img.img-fluid(src='http://placehold.it/500x250', alt='')
+            img.img-fluid(src=item.img, alt='')
           .col-md-6
             h3.my-3 Project Description
             p
