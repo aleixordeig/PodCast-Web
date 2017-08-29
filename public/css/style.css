@@ -71,13 +71,15 @@ footer.page-footer.blue.darken-3.center-on-small-only {
 
 
 p.card-text {
-    /*overflow: hidden;
-    text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    white-space: nowrap;
-    width: 100%;*/
-     overflow: hidden;
+  overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+h4.card-title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }

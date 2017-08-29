@@ -13,7 +13,7 @@ const handleFavorites = require('./handlers/handleFavorites')
 
 router.get('/', handleIndex)
 router.get('/search', handleSearch)
-router.get('/category', handleCategory)
+router.get('/category/:category', handleCategory)
 router.get('/episodes', handleEpisodes)
 router.get('/login', handleLogin)
 router.get('/register', handleRegister)

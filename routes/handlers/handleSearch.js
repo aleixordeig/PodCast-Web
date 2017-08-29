@@ -31,7 +31,3 @@ function handleSearch(req, res) {
 
 module.exports = handleSearch
 
-// searchShows function added to node_modules!!
-// Audiosearch.prototype.searchShows = function (queryString, params) {
-//   return this.get('/search/shows/'+encodeURI(queryString), params);
-// };

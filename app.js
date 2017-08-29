@@ -8,11 +8,15 @@ Audiosearch.prototype.searchShows = function (queryString, params) {
   return this.get('/search/shows/'+encodeURI(queryString), params)
 }
 
+Audiosearch.prototype.searchCategory = function (params) {
+  return this.get('/search/shows/*?filters[categories.name]=' + params);
+};
+
 const express = require('express')
 const path = require('path')
 const app = express()
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 4000
 
 app.set('view engine', 'pug')
 
