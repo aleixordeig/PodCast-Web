@@ -12,6 +12,10 @@ Audiosearch.prototype.searchCategory = function (params) {
   return this.get('/search/shows/*?filters[categories.name]=' + params);
 };
 
+Audiosearch.prototype.searchEpisodes1 = function (params) {
+  return this.get('/search/episodes/*?filters[show_id]=' + params);
+};
+
 const express = require('express')
 const path = require('path')
 const app = express()
