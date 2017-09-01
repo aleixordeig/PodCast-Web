@@ -200,3 +200,153 @@ img.img-fluid.episodes {
        }
 }
 
+
+.player {
+  height: 600px;
+  width: 450px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-225px);
+          transform: translateX(-225px);
+  background-color: #111;
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.5), 0px 0px 40px 0px rgba(0,0,0,0.4);
+}
+.player .image {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.player .image .cover {
+  position: absolute;
+  width: 450px;
+  left: 0px;
+  top: 0px;
+}
+.player .image .filter {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: -webkit-linear-gradient(transparent, #111);
+  background: linear-gradient(transparent, #111);
+}
+.player .description {
+  position: absolute;
+  color: #fff;
+  font-family: Open Sans;
+  top: 350px;
+  left: 50px;
+}
+.player .description p {
+  margin: 0;
+  color: #666;
+}
+.player .description h1 {
+  margin: 5px 0px 0px 0px;
+}
+.player .buttons {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 50px;
+  top: 385px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.player .buttons .playButton,
+.player .buttons .pauseButton {
+  position: absolute;
+  width: 20px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.player .buttons .pauseButton {
+  opacity: 0;
+}
+.player .buttons.active .playButton {
+  opacity: 0;
+}
+.player .buttons.active .pauseButton {
+  opacity: 1;
+}
+.player .time {
+  position: absolute;
+  color: #fff;
+}
+.player .time .timePlayed {
+  position: absolute;
+  top: 450px;
+  left: 50px;
+  font-family: Open Sans;
+}
+.player .time .timeLeft {
+  position: absolute;
+  top: 450px;
+  left: 370px;
+  font-family: Open Sans;
+  color: #666;
+}
+.player .lines {
+  position: absolute;
+}
+.player .lines .songLength {
+  position: absolute;
+  width: 350px;
+  height: 1px;
+  background-color: #666;
+  top: 500px;
+  left: 50px;
+}
+.player .lines .lengthLeft {
+  position: absolute;
+  width: 150px;
+  height: 1px;
+  background-color: #fe5074;
+  top: 500px;
+  left: 50px;
+}
+.player .likeandfav {
+  position: absolute;
+  color: #666;
+}
+.player .likeandfav .fa-heart {
+  position: absolute;
+  top: 530px;
+  left: 50px;
+  font-size: 25px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.player .likeandfav .fa-heart.active {
+  color: #fe5074;
+}
+.player .likeandfav .fa-star {
+  position: absolute;
+  top: 530px;
+  left: 375px;
+  font-size: 25px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.player .likeandfav .fa-star.active {
+  color: #ffdf00;
+}
+
+.audiojs {
+    width: 460px;
+    height: 36px;
+    background: #404040;
+    overflow: hidden;
+    font-family: monospace;
+    font-size: 12px;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #444), color-stop(0.5, #555), color-stop(0.51, #444), color-stop(1, #444));
+    background-image: -moz-linear-gradient(center top, #444 0%, #555 50%, #444 51%, #444 100%);
+    -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    position: absolute;
+    bottom: 100px;
+}

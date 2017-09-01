@@ -26,7 +26,7 @@ function handlePodcast(req, res) {
                             info: item.description,
                             audio: item.audio_files,
                             audioOnline: item.digital_location,
-                            img: item.image_urls.thumb
+                            img: item.image_urls.full
                         }
                     })
 
