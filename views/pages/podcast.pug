@@ -18,24 +18,17 @@ block content
             p
               =item.description
     .container-episodes
-      p
-      .container
-        #accordion(role='tablist', aria-multiselectable='true')
-          .card
-            #headingOne.card-header(role='tab', data-toggle='collapse', data-parent='#accordion', data-target='#collapseOne')
-              button.btn.btn-light-blue.float-right.btn-sm(type='button') Escuchar Audio
-              h5.mb-0
-                a(data-toggle='collapse', data-parent='#accordion', href='#collapseOne')
-                  | EPISODE 1
-            #collapseOne.collapse.in(role='tabpanel', aria-labelledby='headingOne')
-              .card-block
-                | Have a good night ......
-          .card
-            #headingTwo.card-header(role='tab', data-toggle='collapse', data-parent='#accordion', data-target='#collapseTwo')
-              button.btn.btn-light-blue.float-right.btn-sm(type='button') Escuchar Audio
-              h5.mb-0
-                a.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseOne')
-                  | EPISODE 2
-            #collapseTwo.collapse(role='tabpanel', aria-labelledby='headingTwo')
-              .card-block
-                | Anim pariatur cliche reprehenderit, enim eiusmod high life accusaasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasmus terry richardson ad squid.
+        p
+        .container
+          for data in episodes
+            #accordion(role='tablist', aria-multiselectable='true')
+              .card
+                #headingOne.card-header(role='tab', data-toggle='collapse', data-parent='#accordion', data-target='#collapseOne')
+                  button.btn.btn-light-blue.float-right.btn-sm(type='button') Escuchar Audio
+                  h5.mb-0
+                    a(data-toggle='collapse', data-parent='#accordion', href='#collapseOne')
+                      =data.episode
+                #collapseOne.collapse.in(role='tabpanel', aria-labelledby='headingOne')
+                  .card-block
+                    =data.info
+    
