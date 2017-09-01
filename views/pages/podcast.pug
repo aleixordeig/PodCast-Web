@@ -20,15 +20,37 @@ block content
     .container-episodes
         p
         .container
-          for data in episodes
-            #accordion(role='tablist', aria-multiselectable='true')
-              .card
-                #headingOne.card-header(role='tab', data-toggle='collapse', data-parent='#accordion', data-target='#collapseOne')
-                  button.btn.btn-light-blue.float-right.btn-sm(type='button') Escuchar Audio
-                  h5.mb-0
-                    a(data-toggle='collapse', data-parent='#accordion', href='#collapseOne')
-                      =data.episode
-                #collapseOne.collapse.in(role='tabpanel', aria-labelledby='headingOne')
-                  .card-block
+          each data in episodes
+            .accordion
+              dl
+                dt
+                  a.accordion-title.accordionTitle.js-accordionTrigger(href='#accordion1', aria-expanded='false', aria-controls='accordion1') 
+                    =data.episode
+                dd#accordion1.accordion-content.accordionItem.is-collapsed(aria-hidden='true')
+                  p
                     =data.info
-    
+
+
+
+
+            //- #accordion(role='tablist', aria-multiselectable='true')
+            //-   .card
+            //-     #headingOne.card-header(role='tab', data-toggle='collapse', data-parent='#accordion', data-target='#collapseOne')
+            //-       button.btn.btn-light-blue.float-right.btn-sm(type='button') Escuchar Audio
+            //-       h5.mb-0
+            //-         a(data-toggle='collapse', data-parent='#accordion', href='#collapseOne')
+            //-           =data.episode
+            //-     #collapseOne.collapse.in(role='tabpanel', aria-labelledby='headingOne')
+            //-       .card-block
+            //-         =data.info
+
+
+                //-      #accordion.panel-group
+                //- .panel.panel-default
+                //-   .panel-heading
+                //-     h4.panel-title
+                //-       a.accordion-toggle(data-toggle='collapse', href='#collapse' + data.id) #{data.id}
+                //-         =data.episode
+                //-   div(id="collapse#{data.id}").panel-collapse.collapse
+                //-     .panel-body
+                //-       =data.info
