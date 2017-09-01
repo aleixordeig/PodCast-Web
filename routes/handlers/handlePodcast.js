@@ -17,12 +17,15 @@ function handlePodcast(req, res) {
             console.log(podcast)
 
             res.render('pages/podcast', { podcast })
-        })
+        }),
     audiosearch.searchEpisodes1(req.params.id)
-        .then(function(response){
-            const episodes = response
-        console.log(episodes)
-        })
+        .then(function(data){
+            const episodes = data
+        
+            console.log(episodes)
+            })
+        // res.send('pages/podcast', {episodes})
+        // })
 }
 
 module.exports = handlePodcast
@@ -31,6 +34,7 @@ module.exports = handlePodcast
  //        .then(function(response){
  //            const episodes = response.episodes.map(item => {
  //                return {
+ //                id: item.id,
  //                episode: item.title,
  //                info: item.description,
  //                audio: item.audio_files,
