@@ -91,12 +91,8 @@ img.img-fluid.episodes {
 
 
 /*Accordeon Style*/
-
-* {
-  box-sizing:border-box;
-}
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
-body { 
+.container-podcast { 
 
   font-family:'Lato';
 }
@@ -105,20 +101,10 @@ body {
   padding:2em;
   text-align:center;
 }
-.accordion dl,
-.accordion-list {
-   border:1px solid #ddd;
-   &:after {
-       content: "";
-       display:block;
-       height:1em;
-       width:100%;
-       background-color:darken(#38cc70, 10%);
-     }
-}
+
 .accordion dd,
 .accordion__panel {
-   background-color:#eee;
+   background-color:#F5F6FD;
    font-size:1em;
    line-height:1.5em; 
 }
@@ -130,17 +116,13 @@ body {
     position:relative;
     background-color:#eee;
 }
-.container {
-  max-width:960px;
-  margin:0 auto;
-  padding:2em 0 2em 0;
-}
+
 .accordionTitle,
 .accordion__Heading {
- background-color:#38cc70; 
+ background-color:#4BA7EF; 
    text-align:left;
-     font-weight:700; 
-          padding:2em;
+     font-weight:500; 
+          padding:1em;
           display:block;
           text-decoration:none;
           color:#fff;

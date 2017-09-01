@@ -1,34 +1,36 @@
 extends ../layout/layout
 
 block content
-  main
-    p
-      for item in podcast
-        h1.text-center 
-          =item.name
-  // Main layout
-  main.mt-5
-    .container
-      for item in podcast
-        .row
-          .col-md-4
-            img.img-fluid.episodes(src=item.img , alt='')
-          .col-md-8
-            h3.my-3 Content
-            p
-              =item.description
-    .container-episodes
-        p
+  .container-podcast
+    main
+      p
+        for item in podcast
+          h1.text-center 
+            =item.name
+    // Main layout
+    main.mt-5
+      .container
+        for item in podcast
+          .row
+            .col-md-4
+              img.img-fluid.episodes(src=item.img , alt='')
+            .col-md-8
+              h3.my-3 Content
+              p
+                =item.description
+      .container-episodes
         .container
-          each data in episodes
-            .accordion
-              dl
-                dt
-                  a.accordion-title.accordionTitle.js-accordionTrigger(href='#accordion1', aria-expanded='false', aria-controls='accordion1') 
-                    =data.episode
-                dd#accordion1.accordion-content.accordionItem.is-collapsed(aria-hidden='true')
-                  p
-                    =data.info
+          p
+            each data in episodes
+              .accordion
+                dl
+                  dt
+                    button.btn.btn-light-blue.float-right.btn-sm(type='button') Escuchar Audio
+                    a.accordion-title.accordionTitle.js-accordionTrigger(href='#accordion1', aria-expanded='false', aria-controls='accordion1') 
+                      =data.episode
+                  dd#accordion1.accordion-content.accordionItem.is-collapsed(aria-hidden='true')
+                    p
+                      =data.info
 
 
 
