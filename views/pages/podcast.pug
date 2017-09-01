@@ -25,34 +25,18 @@ block content
               .accordion
                 dl
                   dt
-                    button.btn.btn-light-blue.float-right.btn-sm(type='button') Escuchar Audio
+                    button.btn.btn-light-blue.float-right.btn-sm(type='button', data-toggle='modal', data-target='.bd-example-modal-lg') Escuchar Audio
+                    .modal.fade.bd-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='mySmallModalLabel', aria-hidden='true')
+                      .modal-dialog.modal-lg
+                        .modal-content
+                          audio(controls='', preload='metadata', style=' width:500px;')
+                            source(src='', type='audio/mpeg')
+                            |   Your browser does not support the audio element.
+                          br
+                          a(href='http://scriptgenerator.net/really-simple-embed-audio-player-script/', title='Generate here your HTML5 audio player', style='text-align: right;display: block') HTML5 Audio Player
+
                     a.accordion-title.accordionTitle.js-accordionTrigger(href='#accordion1', aria-expanded='false', aria-controls='accordion1') 
                       =data.episode
                   dd#accordion1.accordion-content.accordionItem.is-collapsed(aria-hidden='true')
                     p
                       =data.info
-
-
-
-
-            //- #accordion(role='tablist', aria-multiselectable='true')
-            //-   .card
-            //-     #headingOne.card-header(role='tab', data-toggle='collapse', data-parent='#accordion', data-target='#collapseOne')
-            //-       button.btn.btn-light-blue.float-right.btn-sm(type='button') Escuchar Audio
-            //-       h5.mb-0
-            //-         a(data-toggle='collapse', data-parent='#accordion', href='#collapseOne')
-            //-           =data.episode
-            //-     #collapseOne.collapse.in(role='tabpanel', aria-labelledby='headingOne')
-            //-       .card-block
-            //-         =data.info
-
-
-                //-      #accordion.panel-group
-                //- .panel.panel-default
-                //-   .panel-heading
-                //-     h4.panel-title
-                //-       a.accordion-toggle(data-toggle='collapse', href='#collapse' + data.id) #{data.id}
-                //-         =data.episode
-                //-   div(id="collapse#{data.id}").panel-collapse.collapse
-                //-     .panel-body
-                //-       =data.info

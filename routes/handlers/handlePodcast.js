@@ -18,13 +18,15 @@ function handlePodcast(req, res) {
 
             audiosearch.searchEpisodes1(req.params.id)
                 .then(function(response) {
+                    // const data = response
                     const episodes = response.results.map(item => {
                         return {
                             id: item.id,
                             episode: item.title,
                             info: item.description,
                             audio: item.audio_files,
-                            audioOnline: item.digital_location
+                            audioOnline: item.digital_location,
+                            img: item.image_urls.thumb
                         }
                     })
 
