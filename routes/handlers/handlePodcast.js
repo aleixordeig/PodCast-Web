@@ -16,30 +16,23 @@ function handlePodcast(req, res) {
 
             console.log(podcast)
 
-            res.render('pages/podcast', { podcast })
-        }),
-    audiosearch.searchEpisodes1(req.params.id)
-        .then(function(data){
-            const episodes = data
-        
-            console.log(episodes)
-            })
-        // res.send('pages/podcast', {episodes})
-        // })
+            audiosearch.searchEpisodes1(req.params.id)
+                .then(function(response) {
+                    const episodes = response.results.map(item => {
+                        return {
+                            id: item.id,
+                            episode: item.title,
+                            info: item.description,
+                            audio: item.audio_files,
+                            audioOnline: item.digital_location
+                        }
+                    })
+
+                    console.log(episodes)
+
+                    res.render('pages/podcast', { podcast, episodes })
+                })
+        })
 }
 
 module.exports = handlePodcast
-
- // audiosearch.searchEpisodes1(req.params.id)
- //        .then(function(response){
- //            const episodes = response.episodes.map(item => {
- //                return {
- //                id: item.id,
- //                episode: item.title,
- //                info: item.description,
- //                audio: item.audio_files,
- //                audioOnline: item.digital_location
- //                }
- //            })
- //        console.log(episodes)
- //        })
