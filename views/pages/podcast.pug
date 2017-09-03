@@ -38,7 +38,10 @@ block content
                                 //- p Quinn XCII
                                 h6 
                                   =data.episode
-                              audio(src=data.audioOnline, preload='auto')
+                              .audiojs
+                                .container    
+                                  audio(controls='', preload='none')
+                                    source(src=data.audioOnline, type='audio/mpeg')
                               .likeandfav
                                 .fa.fa-heart
                                 .fa.fa-star

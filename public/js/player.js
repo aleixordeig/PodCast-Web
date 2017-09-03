@@ -6,7 +6,3 @@ $(()=>{
     $('.fa-star').toggleClass('active')
   })
 })
-
-audiojs.events.ready(function() {
-    var as = audiojs.createAll();
-  });
