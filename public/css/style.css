@@ -279,3 +279,11 @@ img.img-fluid.episodes {
     bottom: 100px;
     margin-left: 12%;
 }
+
+h1.text-center.star .fa-star {
+  color: #666666;
+}
+
+h1.text-center.star .fa-star.active {
+  color: #ffdf00;
+}
