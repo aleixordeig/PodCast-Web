@@ -21,12 +21,12 @@ block content
       .container-episodes
         .container
           p
-            each data in episodes
+            each data, index in episodes //Index is an ID , Data Target Class
               .accordion
                 dl
                   dt
-                    button.btn.btn-light-blue.float-right.btn-sm(type='button', data-toggle='modal', data-target='.bd-example-modal-lg') Escuchar Audio
-                    .modal.fade.bd-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='mySmallModalLabel', aria-hidden='true')
+                    button.btn.btn-light-blue.float-right.btn-sm(type='button', data-toggle='modal', data-target=('.modal-' + index)) Escuchar Audio
+                    .modal.fade(class=('modal-' + index) tabindex='-1', role='dialog', aria-labelledby='mySmallModalLabel', aria-hidden='true') 
                       .modal-dialog.modal-lg
                         .modal-content
                           .container-player
