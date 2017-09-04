@@ -280,10 +280,14 @@ img.img-fluid.episodes {
     margin-left: 12%;
 }
 
-h1.text-center.star .fa-star {
+h1.text-left.star .fa-star {
   color: #666666;
 }
 
-h1.text-center.star .fa-star.active {
+h1.text-left.star .fa-star.active {
   color: #ffdf00;
+}
+
+.fa.fa-star.right {
+  margin-right: : auto;
 }
