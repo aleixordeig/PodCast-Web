@@ -1,6 +1,6 @@
-Heroku PodCast en Castellano
+Heroku PodCast 
 
-https://podcastcastellano.herokuapp.com/
+https://podcastcastweb.herokuapp.com/
 
 Objectivos Iniciales Podcast
 
