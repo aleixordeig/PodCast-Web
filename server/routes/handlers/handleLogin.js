@@ -1,5 +1,5 @@
-function handleLogin (req,res) {
-	res.render('pages/login')
+function handleLogin (req, res) {
+  res.redirect('/register')
 }
 
 module.exports = handleLogin

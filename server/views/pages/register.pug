@@ -8,25 +8,26 @@ block content
           h3.text-center.mb-4 Registrarse
           div(ng-controller='registerUser')
               fieldset
-                .form-group.has-error
-                  input.form-control.input-lg(placeholder='Usuario', ng-model='info.name',type='text')
-                .form-group.has-error
-                  input.form-control.input-lg(placeholder='E-mail', ng-model='info.email', type='text')
-                .form-group.has-success
-                  input.form-control.input-lg(placeholder='Contraseña', ng-model='info.password', type='password')
-                .form-group.has-success
-                  input.form-control.input-lg(placeholder='Confirmar contraseña',ng-model='info.confirm', type='password')
-                //- .form-group
-                //-   select.form-control.input-lg
-                //-     option(selecterd='') En donde vives?
-                //-     option(selecterd='') Tienes algun apodo?
-                //-     option(selecterd='') Eres un espia?
-                //-     option(selecterd='') Destruyes codigo?
-                //- .form-group
-                //-   input.form-control.input-lg(placeholder='Respuesta de seguridad', ng-model='info.answer', value='', type='text')
-                .checkbox
-                  label.small
-                    input(value='terms', type='checkbox')
-                    |  Acepto los
-                    a(href='#')  terminos de condición
-                input.btn.btn-lg.btn-primary(ng-click="register(info)" value="Registrarme" readonly)
+                form(method='POST' action='/register')
+                  .form-group.has-error
+                    input.form-control.input-lg(placeholder='Usuario', type='text', name='username')
+                  .form-group.has-error
+                    input.form-control.input-lg(placeholder='E-mail', type='text', name='email')
+                  .form-group.has-success
+                    input.form-control.input-lg(placeholder='Contraseña', type='password')
+                  .form-group.has-success
+                    input.form-control.input-lg(placeholder='Confirmar contraseña', type='password' , name='password')
+                  //- .form-group
+                  //-   select.form-control.input-lg
+                  //-     option(selecterd='') En donde vives?
+                  //-     option(selecterd='') Tienes algun apodo?
+                  //-     option(selecterd='') Eres un espia?
+                  //-     option(selecterd='') Destruyes codigo?
+                  //- .form-group
+                  //-   input.form-control.input-lg(placeholder='Respuesta de seguridad', value='', type='text')
+                  .checkbox
+                    label.small
+                      input(value='terms', type='checkbox')
+                      |  Acepto los
+                      a(href='#')  terminos de condición
+                  input.btn.btn-lg.btn-primary(value="Registrarme" readonly)

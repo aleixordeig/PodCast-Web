@@ -6,16 +6,20 @@ const ObjectId = Schema.Types.ObjectId
 const collection = 'users'
 
 var UserSchema = new Schema({
+  username: String,
   firstname: String,
   lastname: String,
   age: Number,
   country: String,
   image: String,
   email: String,
-  password: String,
   about: String
 }, { collection })
 
-UserSchema.plugin(passportLocalMongoose)
+const options = {
+  usernameField: 'email'
+}
+
+UserSchema.plugin(passportLocalMongoose, (options))
 
 module.exports = mongoose.model('User', UserSchema)

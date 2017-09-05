@@ -19,15 +19,14 @@ block content
                     h3.blue-text.mb-5
                       strong Sign in
                   // Body
-                  .md-form
-                    input#Form-email1.form-control(type='text', ng-model='user', required='')
-                    label(for='Form-email1') Your email
-                  .md-form.pb-3
-                    input#Form-pass1.form-control(type='password',ng-model='user', required='')
-                    label(for='Form-pass1') Your password
-                    p.font-small.blue-text.d-flex.justify-content-end
-                      | Forgot 
-                      a.blue-text.ml-1(href='#')  Password?
+                  form(method='POST', action='/login')
+                    .md-form
+                      input#Form-email1.form-control(type='text', required='', name='email')
+                      label(for='Form-email1') Your email
+                    .md-form.pb-3
+                      input#Form-pass1.form-control(type='password', required='', name='password')
+                      label(for='Form-pass1') Your password
+                    //- g
                   .text-center.mb-3
                     button.btn.blue.btn-block.btn-rounded.z-depth-1a(ng-click="login()" value="Login" readonly ) Sign in
                   p.font-small.dark-grey-text.text-right.d-flex.justify-content-center.mb-3.pt-2  or Sign in with:

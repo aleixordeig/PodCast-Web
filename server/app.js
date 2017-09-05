@@ -25,6 +25,7 @@ Audiosearch.prototype.searchEpisodes1 = function (params) {
 };
 
 
+
 /* bodyParser */
 
 const bodyParser = require('body-parser')
@@ -43,7 +44,6 @@ mongoose.Promise = Promise
 mongoose.connect(urlDB, {useMongoClient: true})
 
 /* Mongoose models */
-const User = require(path.join(__dirname, '/models/user'))
 
 /* Passport Load */
 const passport = require('./config-passport/')
