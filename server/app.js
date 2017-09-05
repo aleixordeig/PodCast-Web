@@ -49,9 +49,11 @@ const User = require(path.join(__dirname, '/models/user'))
 const passport = require('./config-passport/')
 app.use(passport.initialize())
 
+
+
 app.set('view engine', 'pug')
 
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, '../client')))
 
 const routesApp = require('./routes/')
 

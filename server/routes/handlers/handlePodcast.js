@@ -18,7 +18,6 @@ function handlePodcast(req, res) {
 
             audiosearch.searchEpisodes1(req.params.id)
                 .then(function(response) {
-                    // const data = response
                     const episodes = response.results.map(item => {
                         return {
                             id: item.id,
