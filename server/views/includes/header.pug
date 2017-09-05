@@ -17,14 +17,18 @@ nav.navbar.navbar-expand-lg.navbar-dark.blue.darken-3
           input.form-control.mr-sm-2(type='text' placeholder='Buscar' aria-label='Search' name="query")
           button.btn.btn-outline-success.btn-sm.my-2(type='submit')
             i.fa.fa-search.fa-lg
-        li.nav-item.dropdown
+    #myNavbar.collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right(ng-controller='navController')
+        li(ng-repeat='navoption in navoptions')
+          a(href='{{ navoption.route }}') {{ navoption.title }}
+        li.nav-item.dropdown(ng-show='{{ isLoggedIn }}')
           a#navbarDropdownMenuLink-4.nav-link.dropdown-toggle.waves-effect.waves-light(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
             i.fa.fa-hand-o-right
             |  Usuario
           .dropdown-menu.dropdown-menu-right.dropdown-cyan(aria-labelledby='navbarDropdownMenuLink-4')
             a.dropdown-item.waves-effect.waves-light(href='account') Mi cuenta
-            a.dropdown-item.waves-effect.waves-light(href='#') Cerrar Session
-        li.nav-item
-          a.nav-link(href='#') Login
-        li.nav-item
-          a.nav-link(href='#') Register
+            a.dropdown-item.waves-effect.waves-light(href='#', ng-click='logout()') Cerrar Session
+        li.nav-item(ng-hide='{{ isLoggedIn }}')
+            a.nav-link(href='/login') Login
+        li.nav-item(ng-hide='{{ isLoggedIn }}')
+          a.nav-link(href='/register') Register
