@@ -291,3 +291,7 @@ h1.text-left.star .fa-star.active {
 .fa.fa-star.right {
   margin-right: : auto;
 }
+
+.container-login{
+  background: #2196F3;
+}
