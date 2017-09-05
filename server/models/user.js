@@ -1,9 +1,7 @@
-
 const mongoose = require('mongoose')
-const passportLocalMongoose = require('passport-local-mongoose')
 const Schema = mongoose.Schema
-const ObjectId = Schema.Types.ObjectId
-const collection = 'users'
+
+const passportLocalMongoose = require('passport-local-mongoose')
 
 var UserSchema = new Schema({
   username: String,
@@ -14,12 +12,12 @@ var UserSchema = new Schema({
   image: String,
   email: String,
   about: String
-}, { collection })
+}, { collection: 'users' })
 
 const options = {
   usernameField: 'email'
 }
 
-UserSchema.plugin(passportLocalMongoose, (options))
+UserSchema.plugin(passportLocalMongoose, options)
 
 module.exports = mongoose.model('User', UserSchema)

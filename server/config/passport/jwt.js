@@ -1,7 +1,8 @@
-const path = require('path')
 const { Strategy, ExtractJwt } = require('passport-jwt')
 
-const User = require(path.join(__dirname, '../../models/user'))
+const path = require('path')
+const User = require(path.join(base, 'server/models/user'))
+
 const SECRET = process.env.SECRET || 'well'
 
 const jwtOptions = {

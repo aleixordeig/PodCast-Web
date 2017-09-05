@@ -1,6 +1,8 @@
 const express = require('express')
 const router = express.Router()
-const passport = require('./../config-passport/')
+
+const path = require('path')
+const passport = require('./../config/passport/')
 
 const handleIndex = require('./handlers/handleIndex')
 const handleCategory = require('./handlers/handleCategory')
