@@ -1,5 +1,5 @@
 const path = require('path')
-const User = require(path.join(base, 'server/models/user'))
+const User = require(path.join(base, 'models/user'))
 
 function handleRegister (req, res) {
   const { email, password } = req.body
