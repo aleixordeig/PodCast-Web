@@ -1,4 +1,4 @@
-angular.module('podcast', ['ngRoute', 'toastr', 'angular-jwt'])
+angular.module('podcast', ['ngRoute', 'angular-jwt'])
   .config(function ($httpProvider) {
     $httpProvider.interceptors.push('authCheck')
   })
@@ -6,13 +6,13 @@ angular.module('podcast', ['ngRoute', 'toastr', 'angular-jwt'])
     $routeProvider
       .otherwise('/login')
   })
-  .run(function ($rootScope, $location, StorageService, toastr, authService) {
+  .run(function ($rootScope, $location, StorageService, authService) {
     if (authService.isLoggedIn()) {
       const token = StorageService.getToken()
       authService.setCredentials(token)
     }
 
-    $rootScope.$on('$routeChangeStart', function (event, next, toastr, current) {
+    $rootScope.$on('$routeChangeStart', function (event, next, current) {
       console.log('route has changed')
       if (next && next.secure) {
         console.log('this route is secured!!')

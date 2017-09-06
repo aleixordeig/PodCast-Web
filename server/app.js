@@ -41,7 +41,7 @@ const passport = require('./config/passport')
 app.use(passport.initialize())
 
 app.set('view engine', 'pug')
-app.set('views', 'views/')
+app.set('views', 'server/views')
 
 const path = require('path')
 app.use(express.static(path.join(__dirname, '../client')))
