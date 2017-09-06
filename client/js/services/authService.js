@@ -1,6 +1,5 @@
-
 angular.module('podcast')
-  .factory('AuthService', function ($rootScope, $http, StorageService, jwtHelper) {
+  .factory('authService', function ($rootScope, $http, StorageService, jwtHelper) {
     function registerUser (user) {
       const url = `register`
       return $http.post(url, user)
@@ -15,11 +14,11 @@ angular.module('podcast')
 
     function setCredentials (token) {
       const tokenPayload = jwtHelper.decodeToken(token)
-      $rootScope.loggedUser = tokenPayload.username
+      $rootScope.loggedUser = tokenPayload.email
     }
 
-    function doLogin (username, password) {
-      return $http.post('/login', {username, password})
+    function doLogin (email, password) {
+      return $http.post('/login', {email, password})
         .then(res => res.data)
         .then(data => {
           StorageService.saveToken(data.token)

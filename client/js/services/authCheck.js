@@ -1,5 +1,5 @@
 angular.module('podcast')
-.factory('AuthCheck', function (StorageService) {
+.factory('authCheck', function (StorageService) {
   return {
     request: function (config) {
       const token = StorageService.getToken()

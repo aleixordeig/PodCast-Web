@@ -43,7 +43,8 @@
     "promise": "^8.0.1",
     "pug": "^2.0.0-rc.3",
     "request": "^2.81.0",
-    "routes": "^2.1.0"
+    "routes": "^2.1.0",
+    "toastr": "^2.1.2"
   },
   "devDependencies": {
     "node-sass": "^4.5.3",
