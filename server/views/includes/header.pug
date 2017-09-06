@@ -10,8 +10,8 @@ nav.navbar.navbar-expand-lg.navbar-dark.blue.darken-3(ng-controller='NavbarContr
           a.nav-link(href='/')
             | Inicio 
             span.sr-only (current)
-        li.nav-item(ng-show='!loggedUser')
-          a.nav-link(href='favorites') Favoritos
+        //- li.nav-item(ng-show='!loggedUser')
+        //-   a.nav-link(href='favorites') Favoritos
       ul.navbar-nav.ml-auto
         form.form-inline(method='get', action='/search')
           input.form-control.mr-sm-2(type='text' placeholder='Buscar' aria-label='Search' name="query")

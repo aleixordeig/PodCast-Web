@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "node server/app.js",
-    "dev": "nodemon app",
+    "dev": "nodemon server/app.js",
     "build:scss": "node-sass src/scss/clean-blog.scss client/css/clean-blog.css",
     "build:scss:watch": "node-sass src/scss/clean-blog.scss client/css/clean-blog.css --watch"
   },
