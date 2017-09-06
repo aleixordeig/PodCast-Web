@@ -23,7 +23,7 @@ router.get('/category/:category', handleCategory)
 router.get('/podcast/:id', handlePodcast)
 router.get('/login', showLogin)
 router.get('/register', showRegister)
-router.get('/account', handleAccount)
+router.get('/account/:token', handleAccount)
 router.get('/favorites', handleFavorites)
 
 router.post('/login', passport.authenticate('local', {session: true}), handleLogin)

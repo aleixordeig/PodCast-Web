@@ -1,6 +1,6 @@
 const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy
-// const jwtStrategy = require('./jwt')
+const jwtStrategy = require('./jwt')
 
 const path = require('path')
 const User = require(path.join(base, 'models/user'))
@@ -9,9 +9,9 @@ passport.use(new LocalStrategy({
     usernameField: 'email'
 }, User.authenticate()))
 
-// passport.serializeUser(User.serializeUser())
-// passport.deserializeUser(User.deserializeUser())
+passport.serializeUser(User.serializeUser())
+passport.deserializeUser(User.deserializeUser())
 
-// passport.use(jwtStrategy)
+passport.use(jwtStrategy)
 
 module.exports = passport

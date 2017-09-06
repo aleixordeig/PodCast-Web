@@ -5,7 +5,6 @@ block content
   .row
     .col-md-12
       h2.text-center.text-white.mb-4 Más libros, más libres
-      div(ng-controller='loginUser')
         .row
           .col-md-6.mx-auto
             span#formLogin.anchor
@@ -27,8 +26,8 @@ block content
                       input#Form-pass1.form-control(type='password', required='', name='password')
                       label(for='Form-pass1') Your password
                     //- g
-                  .text-center.mb-3
-                    button.btn.blue.btn-block.btn-rounded.z-depth-1a(ng-click="login()" value="Login" readonly ) Sign in
+                    .text-center.mb-3
+                      button.btn.blue.btn-block.btn-rounded.z-depth-1a(ng-click="login()" value="Login" readonly ) Sign in
                   p.font-small.dark-grey-text.text-right.d-flex.justify-content-center.mb-3.pt-2  or Sign in with:
                   .row.my-3.d-flex.justify-content-center
                     // Facebook

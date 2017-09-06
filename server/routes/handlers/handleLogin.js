@@ -1,5 +1,11 @@
+const jwt = require('jsonwebtoken')
+
 function handleLogin (req, res) {
-  res.redirect('/register')
+  // const { email, password } = req.body
+
+  const { _id: id, email } = req.user
+  const token = jwt.sign({id, email}, 'well')
+  res.redirect(`/account/${token}`)
 }
 
 module.exports = handleLogin

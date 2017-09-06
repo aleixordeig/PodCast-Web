@@ -18,10 +18,10 @@ nav.navbar.navbar-expand-lg.navbar-dark.blue.darken-3
           button.btn.btn-outline-success.btn-sm.my-2(type='submit')
             i.fa.fa-search.fa-lg
     #myNavbar.collapse.navbar-collapse
-      ul.nav.navbar-nav.navbar-right(ng-controller='navController')
+      ul.nav.navbar-nav.navbar-right
         li(ng-repeat='navoption in navoptions')
           a(href='{{ navoption.route }}') {{ navoption.title }}
-        li.nav-item.dropdown(ng-show='{{ isLoggedIn }}')
+        li.nav-item.dropdown(ng-show='isLoggedIn')
           a#navbarDropdownMenuLink-4.nav-link.dropdown-toggle.waves-effect.waves-light(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
             i.fa.fa-hand-o-right
             |  Usuario
