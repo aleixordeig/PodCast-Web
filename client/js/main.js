@@ -13,7 +13,6 @@ angular.module('podcast', ['ngRoute', 'angular-jwt', 'ngFileUpload'])
     }
 
     $rootScope.$on('$routeChangeStart', function (event, next, current) {
-      console.log('route has changed')
       if (next && next.secure) {
         console.log('this route is secured!!')
         if (!authService.isLoggedIn()) {
