@@ -25,7 +25,7 @@ Audiosearch.prototype.searchEpisodes1 = function (params) {
 
 const mongoose = require('mongoose')
 mongoose.Promise = Promise
-const urlDB = process.env.urlDB || 'mongodb://localhost:27017/podcastweb'
+const urlDB = process.env.DR_URL || 'mongodb://localhost:27017/podcastweb'
 mongoose.connect(urlDB, {useMongoClient: true})
 
 /* express setup */
