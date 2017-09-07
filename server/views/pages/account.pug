@@ -8,13 +8,13 @@ block content
             img.mx-auto.img-fluid.img-circle.d-block(ng-src='{{ user.image }}', alt='avatar')
             h6.mt-2 
             label.custom-file
-              input(ngf-select='fileSelected($files)', type='file', accept="'image/*'", name='file')
+              input.sm(ngf-select='fileSelected($files)', type='file', accept="'image/*'", name='file')
               span.custom-file-control
             button.btn.mybutton.btn-md(type='submit', ng-click='uploadFile()', img-upload='') Upload image
           .col-lg-8.order-lg-2
             form.form-horizontal(role='form', action='/api/user/update', method='POST')
               input.form-control.hidden(value='{{ user._id }}', name='_id', type='text')
-              legend Personal info
+              legend Personal information
               .form-group
                 label.col-lg-3.control-label First name:
                 .col-lg-8
