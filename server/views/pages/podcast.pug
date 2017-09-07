@@ -7,7 +7,7 @@ block content
         for item in podcast
           h1.text-left.star 
             =item.name
-            .fa.fa-star.right
+            //- .fa.fa-star.right
           .row
             .col-md-4
               img.img-fluid.episodes(src=item.img , alt='')
@@ -39,9 +39,9 @@ block content
                                 .container    
                                   audio(controls='', preload='none')
                                     source(src=data.audioOnline, type='audio/mpeg')
-                              .likeandfav
-                                .fa.fa-heart
-                                .fa.fa-star
+                            //- .likeandfav
+                            //-   .fa.fa-heart
+                            //-   .fa.fa-star
                     a.accordion-title.accordionTitle.js-accordionTrigger(href='#accordion1', aria-expanded='false', aria-controls='accordion1') 
                       =data.episode
                   dd#accordion1.accordion-content.accordionItem.is-collapsed(aria-hidden='true')

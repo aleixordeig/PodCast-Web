@@ -13,7 +13,8 @@ block content
             button.btn.mybutton.btn-md(type='submit', ng-click='uploadFile()', img-upload='') Upload image
           .col-lg-8.order-lg-2
             form.form-horizontal(role='form', action='/api/user/update', method='POST')
-              legend Personal info
+              input.form-control.hidden(value='{{ user._id }}', name='_id', type='text')
+              legend Personal information
               .form-group
                 label.col-lg-3.control-label First name:
                 .col-lg-8
