@@ -40,7 +40,6 @@ angular.module('podcast')
 
         return {
             getInfo,
-            getLanguages,
             updateProfile,
             getData,
             updateImage

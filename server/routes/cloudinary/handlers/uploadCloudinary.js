@@ -5,9 +5,9 @@ const path = require('path')
 const uploadFolderPath = path.join(__dirname, '../upload' )
 
 cloudinary.config({
-  cloud_name: process.env.CLOUD_NAME || 'djtxc60sj',
-  api_key: process.env.API_KEY || '525747164695518',
-  api_secret: process.env.API_SECRET || '7vis6LUIX5b8preIxuupNduqSZE'
+  cloud_name: process.env.CLOUD_NAME || 'duaauvrnf',
+  api_key: process.env.API_KEY || '938249892175117',
+  api_secret: process.env.API_SECRET || 'YmU4Kp9MlnEdMLGHJc6N7e-YybY'
 });
 
 function uploadCloudinary(req, res, next) {

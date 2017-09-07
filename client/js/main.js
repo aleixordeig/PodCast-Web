@@ -1,4 +1,4 @@
-angular.module('podcast', ['ngRoute', 'angular-jwt'])
+angular.module('podcast', ['ngRoute', 'angular-jwt', 'ngFileUpload'])
   .config(function ($httpProvider) {
     $httpProvider.interceptors.push('authCheck')
   })

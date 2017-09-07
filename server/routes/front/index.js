@@ -24,7 +24,7 @@ router.get('/category/:category', handleCategory)
 router.get('/podcast/:id', handlePodcast)
 router.get('/login', showLogin)
 router.get('/register', showRegister)
-router.get('/user/:token', handleAccount)
+router.get('/user', handleAccount)
 router.get('/favorites', handleFavorites)
 
 /* form handling */

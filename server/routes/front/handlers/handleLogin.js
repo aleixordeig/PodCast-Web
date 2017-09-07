@@ -5,7 +5,7 @@ function handleLogin (req, res) {
 
   const { _id: id, email } = req.user
   const token = jwt.sign({id, email}, 'well')
-  res.redirect(`/user/${token}`)
+  res.redirect('/user?token=' + token)
 }
 
 module.exports = handleLogin
