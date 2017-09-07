@@ -8,7 +8,7 @@ block content
             img.mx-auto.img-fluid.img-circle.d-block(ng-src='{{ user.image }}', alt='avatar')
             h6.mt-2 
             label.custom-file
-              input.sm(ngf-select='fileSelected($files)', type='file', accept="'image/*'", name='file')
+              input(ngf-select='fileSelected($files)', type='file', accept="'image/*'", name='file')
               span.custom-file-control
             button.btn.mybutton.btn-md(type='submit', ng-click='uploadFile()', img-upload='') Upload image
           .col-lg-8.order-lg-2

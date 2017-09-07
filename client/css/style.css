@@ -292,11 +292,15 @@ h1.text-left.star .fa-star.active {
 .fa.fa-star.right {
   margin-right: : auto;
 }
-input.sm {
+input {
   color:white;
 }
 
 button.btn.mybutton.btn-md.savechanges , button.btn.mybutton.btn-md {
   background-color: #4285F4;
+}
+
+input.form-control.hidden{
+  color:white;
 }
 
