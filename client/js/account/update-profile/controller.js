@@ -1,5 +1,5 @@
 angular.module('podcast')
-    .controller('updateProfile', ['$scope', function($scope) {
+    .controller('updateProfile', function($scope, $http) {
         $scope.info = {
             name: 'John',
             lastName: 'Doe',
@@ -17,5 +17,7 @@ angular.module('podcast')
         $scope.save = function() {
             console.log('Hello  AAAA World')
             console.log($scope.info.name)
+
+            // TODO use $http to call api and save the profile
         }
-}]);
+});

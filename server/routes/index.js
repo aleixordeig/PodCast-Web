@@ -14,8 +14,10 @@ const handleAccount = require('./handlers/handleAccount')
 const handleFavorites = require('./handlers/handleFavorites')
 const handleLogin = require('./handlers/handleLogin')
 const handleRegister = require('./handlers/handleRegister')
+const handleUpdateProfile = require('./handlers/handleUpdateProfile')
 
 
+/* navigation handling */
 
 router.get('/', handleIndex)
 router.get('/search', handleSearch)
@@ -26,8 +28,14 @@ router.get('/register', showRegister)
 router.get('/account/:token', handleAccount)
 router.get('/favorites', handleFavorites)
 
+/* form handling */
+
 router.post('/login', passport.authenticate('local', {session: true}), handleLogin)
 router.post('/register', handleRegister)
+
+/* api handling */
+
+router.post('/api/profile/', handleUpdateProfile)
 
 
 module.exports = router
