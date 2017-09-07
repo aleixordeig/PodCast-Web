@@ -23,13 +23,13 @@ function handlePodcast(req, res) {
                             id: item.id,
                             episode: item.title,
                             info: item.description,
-                            audio: item.audio_files,
+                            audio: item.audio_files[0].mp3,
                             audioOnline: item.digital_location,
                             img: item.image_urls.full
                         }
                     })
 
-                    console.log(episodes)
+                    console.log( episodes )
 
                     res.render('pages/podcast', { podcast, episodes })
                 })
