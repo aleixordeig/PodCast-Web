@@ -1,61 +1,43 @@
 extends ../layout/layout
 block content
   p
-    main
+    main(ng-controller='usersController')
       .container
         .row.my-2
           .col-lg-4.order-lg-1.text-center
-            img.mx-auto.img-fluid.img-circle.d-block(src='https://placehold.it/300x300', alt='avatar')
-            h6.mt-2 Upload a different photo
+            img.mx-auto.img-fluid.img-circle.d-block(ng-src='{{ user.image }}', alt='avatar')
+            h6.mt-2 
             label.custom-file
-              input#file.custom-file-input(type='file')
+              input(ngf-select='fileSelected($files)', type='file', accept="'image/*'", name='file')
               span.custom-file-control
+            button.btn.mybutton.btn-md(type='submit', ng-click='uploadFile()', img-upload='') Upload image
           .col-lg-8.order-lg-2
-                div(ng-controller='updateProfile')
-                  form(role='form')
-                    .form-group.row
-                      label.col-lg-3.col-form-label.form-control-label Nombre
-                      .col-lg-9
-                        input.form-control(type='text', ng-model="info.name")
-                    .form-group.row
-                      label.col-lg-3.col-form-label.form-control-label Apellidos
-                      .col-lg-9
-                        input.form-control(type='text', ng-model="info.lastName")
-                    .form-group.row
-                      label.col-lg-3.col-form-label.form-control-label Email
-                      .col-lg-9
-                        input.form-control(type='email', ng-model="info.email")
-                    .form-group.row
-                      label.col-lg-3.col-form-label.form-control-label Compañia
-                      .col-lg-9
-                        input.form-control(type='text', ng-model="info.company")
-                    .form-group.row
-                      label.col-lg-3.col-form-label.form-control-label Web
-                      .col-lg-9
-                        input.form-control(type='url', ng-model="info.website")
-                    .form-group.row
-                      label.col-lg-3.col-form-label.form-control-label Dirrección
-                      .col-lg-9
-                        input.form-control(type='text', ng-model="info.address", placeholder='Calle')
-                    .form-group.row
-                      label.col-lg-3.col-form-label.form-control-label
-                      .col-lg-6
-                        input.form-control(type='text', ng-model="info.city", placeholder='Ciudad')
-                      .col-lg-3
-                        input.form-control(type='text', ng-model="info.country", placeholder='Pais')
-                    .form-group.row
-                      label.col-lg-3.col-form-label.form-control-label Usuario
-                      .col-lg-9
-                        input.form-control(type='text', ng-model="info.username")
-                    .form-group.row
-                      label.col-lg-3.col-form-label.form-control-label Contraseña
-                      .col-lg-9
-                        input.form-control(type='password', ng-model="info.password")
-                    .form-group.row
-                      label.col-lg-3.col-form-label.form-control-label Confirmar contraseña
-                      .col-lg-9
-                        input.form-control(type='password', ng-model="info.confirm")
-                    .form-group.row
-                      label.col-lg-3.col-form-label.form-control-label
-                      .col-lg-9
-                        input.btn.btn-primary(ng-click="save(info)" value="Save" readonly )
+            form.form-horizontal(role='form', action='/api/user/update', method='POST')
+              input.form-control.hidden(value='{{ user._id }}', name='_id', type='text')
+              legend Personal info
+              .form-group
+                label.col-lg-3.control-label First name:
+                .col-lg-8
+                  input.form-control(value='{{ user.firstname }}', name='firstname', type='text')
+              .form-group
+                label.col-lg-3.control-label Last name:
+                .col-lg-8
+                  input.form-control(value='{{ user.lastname }}', name='lastname', type='text')
+              .form-group
+                label.col-lg-3.control-label Country:
+                .col-lg-8
+                  input.form-control(value='{{ user.country }}', name='country', type='text')
+              .form-group
+                label.col-lg-3.control-label Age:
+                .col-lg-8
+                  input.form-control(value='{{ user.age }}', name='age', type='text')
+              .form-group
+                label.col-lg-3.control-label About me:
+                .col-lg-8
+                  textarea.form-control(name='about') {{ user.about }}
+              .form-group
+                label.col-lg-3.control-label Email:
+                .col-lg-8
+                  input.form-control(value='{{ user.username }}', name='email', type='email')
+              .col-lg-8.col-lg-offset-3.containbutton
+                button.btn.mybutton.btn-md.savechanges(type='submit', ng-click='showAlert()') Save changes

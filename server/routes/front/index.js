@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 const path = require('path')
-const passport = require('./../config/passport/')
+const passport = require('./../../config/passport/')
 
 const handleIndex = require('./handlers/handleIndex')
 const handleCategory = require('./handlers/handleCategory')
@@ -14,7 +14,6 @@ const handleAccount = require('./handlers/handleAccount')
 const handleFavorites = require('./handlers/handleFavorites')
 const handleLogin = require('./handlers/handleLogin')
 const handleRegister = require('./handlers/handleRegister')
-const handleUpdateProfile = require('./handlers/handleUpdateProfile')
 
 
 /* navigation handling */
@@ -25,7 +24,7 @@ router.get('/category/:category', handleCategory)
 router.get('/podcast/:id', handlePodcast)
 router.get('/login', showLogin)
 router.get('/register', showRegister)
-router.get('/account/:token', handleAccount)
+router.get('/user/:token', handleAccount)
 router.get('/favorites', handleFavorites)
 
 /* form handling */
@@ -33,9 +32,6 @@ router.get('/favorites', handleFavorites)
 router.post('/login', passport.authenticate('local', {session: true}), handleLogin)
 router.post('/register', handleRegister)
 
-/* api handling */
-
-router.post('/api/profile/', handleUpdateProfile)
-
-
 module.exports = router
+
+

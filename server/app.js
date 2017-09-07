@@ -46,8 +46,9 @@ app.set('views', 'server/views')
 const path = require('path')
 app.use(express.static(path.join(__dirname, '../client')))
 
-const routesApp = require('./routes/')
-app.use(routesApp)
+app.use(require('./routes/front/'))
+app.use('/api', require('./routes/api/'))
+app.use(require('./routes/cloudinary/'))
 
 const PORT = process.env.PORT || 4000
 app.listen(PORT)
