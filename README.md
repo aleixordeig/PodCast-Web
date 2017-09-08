@@ -6,6 +6,7 @@
 [![ES6](https://github.com/MarioTerron/logo-images/blob/master/logos/es6.png)](http://www.ecma-international.org/ecma-262/6.0/) 
 [![npm](https://github.com/MarioTerron/logo-images/blob/master/logos/npm.png)](https://www.npmjs.com/)
 [![Bower](https://github.com/FransLopez/logo-images/blob/master/logos/bower.png)](https://bower.io/)
+[![PugJS](https://github.com/Iggy-Codes/logo-images/blob/master/logos/pug.png)](http://www.pugjs.org/) [![jQuery](https://github.com/Iggy-Codes/logo-images/blob/master/logos/jquery.png)](http://jquery.com/) 
 [![MongoDB](https://github.com/FransLopez/logo-images/blob/master/logos/mongodb.png)](https://www.mongodb.com/)
 ![Monogoose](https://github.com/MarioTerron/logo-images/blob/master/logos/mongoose.png)
 [![HTML5,CSS3 and JS](https://github.com/FransLopez/logo-images/blob/master/logos/html5-css3-js.png)](http://www.w3.org/) 
@@ -114,6 +115,7 @@ The server part has multiple **API endpoints** using several routes:
     - bootstrap: 4.0.0-beta
     - popper.js: 1.11.1
     - jquery: 3.2.1
+    - ng-file-upload: 12.2.13
 
 - **Back-end**
   - dotenv: 4.0.0
@@ -131,6 +133,7 @@ The server part has multiple **API endpoints** using several routes:
   - del: 3.0.0
   - multer: 1.3.0
   - audiosearch-client-node: 1.0.1
+  - pug: 2.0.0-rc.3
 
 ---
 
