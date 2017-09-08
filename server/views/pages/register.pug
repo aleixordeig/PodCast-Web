@@ -10,13 +10,13 @@ block content
               fieldset
                 form(method='POST' action='/register')
                   .form-group.has-error
-                    input.form-control.input-lg(placeholder='Usuario', type='text', name='username')
+                    input.form-control.input-lg(placeholder='Username', type='text', name='username')
                   .form-group.has-error
                     input.form-control.input-lg(placeholder='E-mail', type='text', name='email')
                   .form-group.has-success
-                    input.form-control.input-lg(placeholder='Contraseña', type='password')
+                    input.form-control.input-lg(placeholder='Password', type='password')
                   .form-group.has-success
-                    input.form-control.input-lg(placeholder='Confirmar contraseña', type='password' , name='password')
+                    input.form-control.input-lg(placeholder='Confirm Password', type='password' , name='password')
                   //- .form-group
                   //-   select.form-control.input-lg
                   //-     option(selecterd='') En donde vives?
@@ -30,4 +30,4 @@ block content
                   //-     input(value='terms', type='checkbox')
                   //-     |  Acepto los
                   //-     a(href='#')  terminos de condición
-                  input.btn.btn-lg.btn-primary(value="Registrarme", type="submit" readonly)
+                  input.btn.btn-lg.btn-primary(value="Register", type="submit" readonly)

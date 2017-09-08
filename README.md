@@ -77,7 +77,7 @@ You need to create an **.env** file in the project root with the following envir
 ### To run the server:
 
 ```
-$ npm install
+$ nodemon server/app.js
 ```
 
 All dependencies will be installed automatically

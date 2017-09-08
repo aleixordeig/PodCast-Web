@@ -14,7 +14,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.blue.darken-3(ng-controller='NavbarContr
         //-   a.nav-link(href='favorites') Favoritos
       ul.navbar-nav.ml-auto
         form.form-inline(method='get', action='/search')
-          input.form-control.mr-sm-2(type='text' placeholder='Buscar' aria-label='Search' name="query")
+          input.form-control.mr-sm-2(type='text' placeholder='Search' aria-label='Search' name="query")
           button.btn.btn-outline-success.btn-sm.my-2(type='submit')
             i.fa.fa-search.fa-lg
         li.nav-item.dropdown(ng-show='loggedUser')
