@@ -25,16 +25,12 @@ angular.module('podcast')
       UsersService.getInfo($rootScope.userId)
         .then(function (response) {
           $scope.user = response
-          $scope.languages = response.languages
           if(!response.image) {
             UsersService.updateImage('http://res.cloudinary.com/djtxc60sj/image/upload/v1504710538/skytalks/default-user-image.png')
             $window.location.reload()
           }
         })
 
-      $scope.showAlert = function () {
-        $scope.show = true
-      }
 
       $scope.fileSelected = (files) => {
         if (files && files.length) {
