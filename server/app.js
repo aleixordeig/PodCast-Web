@@ -47,6 +47,7 @@ const path = require('path')
 app.use(express.static(path.join(__dirname, '../client')))
 
 app.use(require('./routes/front/'))
+app.use(require('./routes/auth/'))
 app.use('/api', require('./routes/api/'))
 app.use(require('./routes/cloudinary/'))
 

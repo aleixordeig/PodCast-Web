@@ -10,7 +10,7 @@ block content
             label.custom-file
               input(ngf-select='fileSelected($files)', type='file', accept="'image/*'", name='file')
               span.custom-file-control
-            button.btn.mybutton.btn-md(type='submit', ng-click='uploadFile()', img-upload='') Upload image
+            button.btn.mybutton.btn-md.savechanges(type='submit', ng-click='uploadFile()', img-upload='') Upload image
           .col-lg-8.order-lg-2
             form.form-horizontal(role='form', action='/api/user/update', method='POST')
               input.form-control.hidden(value='{{ user._id }}', name='_id', type='text')

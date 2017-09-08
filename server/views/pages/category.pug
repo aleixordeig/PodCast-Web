@@ -5,7 +5,7 @@ block content
     .container
       // Page Heading
       h1.my-4
-        small Los mas escuchados!
+        small Most Listened!
       .container-results
         .row
           for item in results
@@ -18,7 +18,7 @@ block content
                       =item.name
                     p.card-text
                       =item.description
-                  a.btn.btn-primary(href='/podcast/' + item.id) Ir
+                  a.btn.btn-primary(href='/podcast/' + item.id) Go 
   //- main
   //-   hr
   //-   // Pagination
